@@ -12,3 +12,9 @@ Dependency Injection
 Inversion Of Control
 Application Architecture - Hexaginal/Onion/Clean
 Testability - Unit testing
+
+How To Run:
+1. Make sure to update the connection string in the MyJobs\appsettings.json file to a valid MS SQL database server.
+2. Run Update-Database command in the nuget cli or powershell in the DAL folder. To create the database
+
+
