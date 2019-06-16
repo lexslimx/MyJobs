@@ -10,7 +10,7 @@ Asp.net Core
 EntityFramework Core
 Dependency Injection
 Inversion Of Control
-Application Architecture - Hexaginal/Onion/Clean
+Application Architecture - Hexagonal/Onion/Clean
 Testability - Unit testing
 
 How To Run:
