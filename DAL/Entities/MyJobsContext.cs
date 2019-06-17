@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Text;
+using System.Linq;
 
 namespace DAL.Entities
 {
@@ -9,6 +10,9 @@ namespace DAL.Entities
         public MyJobsContext(DbContextOptions<MyJobsContext> options) :
             base(options)
         {
+            if(Database.GetPendingMigrations().ToList().Count > 0){
+                Database.Migrate();
+            }
         }
 
         public DbSet<Job> Jobs { get; set; }
