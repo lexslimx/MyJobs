@@ -5,16 +5,20 @@ Each one of our registered persons is fortunate enough to have as many jobs as t
 
 Go ahead, register your self and your desired jobs!
 
-Learn how to architect and build a modern web application using the below technologies, patterns and practices:
-Asp.net Core
-EntityFramework Core
-Dependency Injection
-Inversion Of Control
-Application Architecture - Hexagonal/Onion/Clean
-Testability - Unit testing
+## Learn how to architect and build a modern web application using the below technologies, patterns and practices:
+--Asp.net Core
+- EntityFramework Core
+- Dependency Injection- 
+- Inversion Of Control
+- Application Architecture - Hexagonal/Onion/Clean
+- Testability - Unit testing
 
-How To Run:
-1. Make sure to update the connection string in the MyJobs\appsettings.json file to a valid MS SQL database server.
-2. Run Update-Database command in the nuget cli or powershell in the DAL folder. To create the database
+## How To Run:
+- Make sure to update the connection string in the MyJobs\appsettings.json file to a valid MS SQL database server.
+- Run Update-Database command in the nuget cli or powershell in the DAL folder. To create the database
 
 
+## Sample Application:
+- This repository has autoamted build and release to an azure web app:
+- Migrations will also be automatically applied to the database.
+https://mysamplejobs.azurewebsites.net
