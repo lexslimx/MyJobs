@@ -12,7 +12,8 @@
 #web build results directory
 bin/
 obj/
-**/wwwwroot/lib
+**/wwwwroot/lib/
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
