@@ -13,6 +13,8 @@
 bin/
 obj/
 **/wwwwroot/lib/
+wwwroot/lib
+wwwroot/dist
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)
