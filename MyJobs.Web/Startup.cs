@@ -59,7 +59,7 @@ namespace MyJobs.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Persons}/{action=Index}/{id?}");
             });
         }
     }
