@@ -15,7 +15,11 @@ Go ahead, register your self and your desired jobs!
 
 ## How To Run:
 - Make sure to update the connection string in the MyJobs\appsettings.json file to a valid MS SQL database server.
-- Run Update-Database command in the nuget cli or powershell in the DAL folder. To create the database
+To Update the database using migrations run (from the web folder):
+dotnet ef --startup-project ../MyJobs.Web/MyJobs.Web.csproj  migrations add newmigrationname
+ then
+dotnet ef --startup-project ../MyJobs.Web/MyJobs.Web.csproj  database update
+
 
 
 ## Sample Application:
