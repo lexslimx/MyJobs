@@ -1,15 +1,17 @@
-﻿using MyJobs.Infrastructure.Entities;
+﻿using MyJobs.Core.ViewModels;
+using MyJobs.Infrastructure.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using MyJobs.Core.Services;
 
-namespace MyJobs.Core
+namespace MyJobs.Core.Services
 {
-    public class PeopleRegister : IPeopleRegister
+    public class PeopleService : IPeopleService
     {
         private readonly MyJobsContext _db;
 
-        public PeopleRegister(MyJobsContext db)
+        public PeopleService(MyJobsContext db)
         {
             _db = db;
         }
@@ -60,17 +62,5 @@ namespace MyJobs.Core
 
             _db.SaveChanges();
         }
-    }
-
-    public class PersonViewModel
-    {
-        public string FirstName { get; set; }
-        public string Address { get; set; }
-    }
-
-    public class JobViewModel
-    {
-        public string Title { get; set; }
-        public double Salary { get; set; }
     }
 }

@@ -5,14 +5,16 @@ using System.Threading.Tasks;
 using MyJobs.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyJobs.Core.Services;
+using MyJobs.Core.ViewModels;
 
 namespace MyJobs.Web.Controllers
 {
     public class PersonsController : Controller
     {
-        private readonly IPeopleRegister _peopleRegister;
+        private readonly IPeopleService _peopleRegister;
 
-        public PersonsController(IPeopleRegister peopleRegister)
+        public PersonsController(IPeopleService peopleRegister)
         {
             _peopleRegister = peopleRegister;
         }

@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyJobs.Core.Services;
 
 namespace MyJobs.Web
 {
@@ -36,7 +37,7 @@ namespace MyJobs.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddTransient<IPeopleRegister, PeopleRegister>();
+            services.AddTransient<IPeopleService, PeopleService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
