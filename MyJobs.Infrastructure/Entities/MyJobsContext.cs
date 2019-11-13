@@ -10,9 +10,9 @@ namespace MyJobs.Infrastructure.Entities
         public MyJobsContext(DbContextOptions<MyJobsContext> options) :
             base(options)
         {
-            if(Database.GetPendingMigrations().ToList().Count > 0){
-                Database.Migrate();
-            }
+            //if(Database.GetPendingMigrations().ToList().Count > 0){
+            //    Database.Migrate();
+            //}
         }
 
         public DbSet<Job> Jobs { get; set; }

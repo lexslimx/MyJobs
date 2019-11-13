@@ -27,7 +27,7 @@ namespace MyJobs.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MyJobs.Infrastructure.Entities.MyJobsContext>
-                (options => options.UseSqlServer("Server=.;Database=MyJobsDb;user id=sa;password=Alien123.;", b => b.MigrationsAssembly("MyJobs.Infrastructure")));
+                (options => options.UseInMemoryDatabase("MyJobsDb"));
 
             services.Configure<CookiePolicyOptions>(options =>
             {
