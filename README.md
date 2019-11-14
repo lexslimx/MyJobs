@@ -1,4 +1,6 @@
 # MyJobs
+- Build Status: [![Build status](https://dev.azure.com/alexMaina/MyJobs/_apis/build/status/MyJobs-CI)](https://dev.azure.com/alexMaina/MyJobs/_build/latest?definitionId=54)
+
 Hack friday sample application
 Welcome to our Hack Friday job registry web application
 Each one of our registered persons is fortunate enough to have as many jobs as they wish paying their desired amounts..
