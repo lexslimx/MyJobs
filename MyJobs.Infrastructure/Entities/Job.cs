@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace MyJobs.Infrastructure.Entities
+﻿namespace MyJobs.Infrastructure.Entities
 {
     public class Job
     {

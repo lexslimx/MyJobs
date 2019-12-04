@@ -1,7 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Text;
-using System.Linq;
 
 namespace MyJobs.Infrastructure.Entities
 {
