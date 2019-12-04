@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MyJobs.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyJobs.Core.Services;
@@ -46,8 +42,7 @@ namespace MyJobs.Web.Controllers
         public ActionResult Create(PersonViewModel newPerson)
         {
             try
-            {
-                // TODO: Add insert logic here
+            {                
                 _peopleRegister.SavePerson(newPerson);
 
                 return RedirectToAction(nameof(Index));
@@ -69,22 +64,13 @@ namespace MyJobs.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+          throw new NotImplementedException();
         }
 
         // GET: Persons/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+           throw new NotImplementedException();
         }
 
         // POST: Persons/Delete/5
@@ -92,16 +78,7 @@ namespace MyJobs.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+          throw new NotImplementedException();
         }
     }
 }

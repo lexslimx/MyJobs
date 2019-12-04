@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyJobs.Core.ViewModels
+﻿namespace MyJobs.Core.ViewModels
 {
     public class JobViewModel
     {
