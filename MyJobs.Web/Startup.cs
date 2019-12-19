@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MyJobs.Core;
-using MyJobs.Infrastructure.Entities;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,11 +32,11 @@ namespace MyJobs.Web
             });
 
             services.AddTransient<IPeopleService, PeopleService>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -55,13 +49,16 @@ namespace MyJobs.Web
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+      
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Persons}/{action=Index}/{id?}");
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {                
+                endpoints.MapControllers();
+                endpoints.MapControllerRoute("default", "{controller=Persons}/{action=Index}/{id?}");
             });
+
+
         }
     }
 }
